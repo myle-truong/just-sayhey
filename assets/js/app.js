@@ -143,6 +143,6 @@ const swiper = new Swiper('.reference_container', {
 });
 
 /*===== COPYRIGHT =====*/
-// const date = new Date();
-// const year = date.getFullYear();
-// document.getElementById('year').innerHTML = year;
+const date = new Date();
+const year = date.getFullYear();
+document.getElementById('year').innerHTML = year;
