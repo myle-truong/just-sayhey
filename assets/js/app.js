@@ -87,11 +87,11 @@ linkWork.forEach((l) => l.addEventListener('click', activeWorks));
 
 /*===== GSAP ANIMATION =====*/
 const words = [
-   'Hana Truong',
-   'Junior Frontend Developer',
+   'I am Hana Truong',
+   ' A Junior Frontend Developer',
    'Hardworkers.',
    'teamplayer.',
-   ' will be the member of your team.',
+   'ICould I "sayhey" to you everyday?',
 ];
 
 let cursor = gsap.to('.cursor', {

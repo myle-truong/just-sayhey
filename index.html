@@ -57,14 +57,14 @@
          <!--===== HOME =====-->
          <section class="home" id="home">
             <div class="home__container hn-container hn-grid">
+               <h1 class="home__subtite" id="greeting">Hey</h1>
                <div class="home__data">
                   <h1 class="home__greeting">
                      <span class="box"></span>
-                     <span class="hi" id="greeting">Hey, <br />I am </span>
+                     <span class="hi"></span>
                      <span class="text"></span>
                      <span class="cursor"> &#10084;&#65039; </span>
                   </h1>
-                  <!-- <a href="#" class="button button-header">Contact</a> -->
                </div>
                <div class="home__social">
                   <a
@@ -87,13 +87,17 @@
                      ><i class="bx bxl-github"></i
                   ></a>
                </div>
-               <div class="home__img">
-                  <img src="./assets/images/home.svg" alt="home-img" />
-               </div>
             </div>
+
+            <img
+               src="./assets/images/home1.svg"
+               class="home__img"
+               alt="homebg"
+               srcset=""
+            />
          </section>
          <!--===== ABOUT =====-->
-         <section class="about section hn-container" id="about">
+         <section class="about section" id="about">
             <h2 class="section-title">About</h2>
 
             <div class="about__container hn-grid">
@@ -124,15 +128,16 @@
          <!--===== SKILLS =====-->
          <section class="skills section hn-container" id="skills">
             <h2 class="section-title">Skills</h2>
+            <p class="skills__text">
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+               optio id vero amet, alias architecto consectetur error eum eaque
+               sit.
+            </p>
 
             <div class="skills__container hn-grid">
-               <div>
-                  <h2 class="skills__subtitle">Profesional Skills</h2>
-                  <p class="skills__text">
-                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                     Velit optio id vero amet, alias architecto consectetur
-                     error eum eaque sit.
-                  </p>
+               <di>
+                  <!-- <h2 class="skills__subtitle">Profesional Skills</h2> -->
+
                   <div class="skills__data">
                      <div class="skills__names">
                         <i class="bx bxl-html5 skills__icon"></i>
@@ -193,14 +198,10 @@
                         <span class="skills__percentage">35%</span>
                      </div>
                   </div>
-               </div>
+               </di>
 
-               <div>
-                  <img
-                     src="./assets/images/skills.svg"
-                     alt=""
-                     class="skills__img"
-                  />
+               <div class="skills__img">
+                  <img src="./assets/images/skills.svg" alt="" />
                </div>
             </div>
          </section>
@@ -404,46 +405,50 @@
             </div>
          </section>
          <!--===== CONTAC =====-->
-         <!--===== CONTACTME =====-->
          <section class="section contact hn-container" id="contact">
             <h2 class="section-title">Lets get in touch</h2>
 
             <div class="contact__container hn-grid">
-               <div class="contact__content hn-grid">
+               <div class="contact__content">
                   <div class="contact__box">
-                     <p>
+                     <div class="">
                         <span class="contact__title">
                            <i class="bx bx-home contact__icon"></i>
-                           Eernegemsestraat 169, 8211 Zedelgem
+                           <p>Eernegemsestraat 169, 8211 Zedelgem</p>
                         </span>
-                        <br />
+                     </div>
+                     <div class="">
                         <span class="contact__title">
                            <i class="bx bx-phone contact__icon"></i>
-                           047 03 50 71 </span
-                        ><br />
+                           <p>0474 03 50 71</p>
+                        </span>
+                     </div>
+                     <div class="">
                         <span class="contact__title">
                            <i class="bx bx-envelope contact__icon"></i>
-                           hana2.truong@gmail.com
+                           <p>hana2.truong@gmail.com</p>
                         </span>
-                     </p>
+                     </div>
                   </div>
                </div>
 
-               <div class="contact__container hn-grid">
-                  <h3 class="section-subtitle">Drop me a message</h3>
+               <div class="contact__content">
                   <form action="" class="contact__form">
                      <div class="contact__inputs">
                         <input
+                           required
                            type="text"
                            placeholder="Name"
                            class="contact__input"
                         />
                         <input
+                           required
                            type="mail"
                            placeholder="Email"
                            class="contact__input"
                         />
                         <textarea
+                           required
                            placeholder="Messages"
                            name=""
                            id=""
