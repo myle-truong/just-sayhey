@@ -162,3 +162,39 @@ img {
    background-color: var(--main-color);
    color: var(--light-color);
 }
+
+/* ===== HOW TO SETUP PERFECT BG IMG =====*/
+.box {
+   background-image: url('./');
+
+   /* Make image center */
+   background-position: center center;
+
+   /* Make image fixed */
+   background-attachment: fixed;
+
+   /* Not repeat images */
+   background-repeat: no-repeat;
+
+   /* Set background size auto */
+   background-size: auto;
+}
+
+/* Media query for mobile devices  */
+@media only screen and (max-width: 767px) {
+   body {
+      background-image: url('/.');
+   }
+}
+
+/* shows the background image in different viewports. */
+.anotherBox {
+   /* Image Location */
+   background-image: url('./'); /* Background image is centered vertically and horizontally at all times */
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   background-color: #464646; /* Font Colour */
+   color: white;
+}

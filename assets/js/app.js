@@ -85,13 +85,26 @@ function activeWorks() {
 }
 linkWork.forEach((l) => l.addEventListener('click', activeWorks));
 
+/*===== GREETING=====*/
+const time = new Date().getHours();
+let greeting;
+if (time < 12) {
+   greeting = 'Hey, Goede morgen!';
+} else if (time < 20) {
+   greeting = 'Hey, Goede middag!';
+} else {
+   greeting = 'Hey, Goede avond!';
+}
+document.getElementById('greeting').innerHTML = greeting;
+
 /*===== GSAP ANIMATION =====*/
 const words = [
-   'I am Hana Truong',
-   ' A Junior Frontend Developer',
-   'Hardworkers.',
-   'teamplayer.',
-   'ICould I "sayhey" to you everyday?',
+   'I am Hana Truong.',
+   'A junior Frontend developer.',
+   'I interested to play with colors, shapes and coding. ',
+   'I am teamplayer & hardworkers.',
+   'I want become A Creative frontend developer',
+   'Please hire me',
 ];
 
 let cursor = gsap.to('.cursor', {

@@ -301,16 +301,21 @@ img {
    row-gap: 2rem;
 }
 
-.home__subtite {
-   position: absolute;
-   top: 10%;
-   left: 45%;
+.home__subtite,
+.home__greeting {
+   font-family: 'Bad Script', cursive;
+   font-size: var(--h1-font-size);
    color: var(--white);
 }
 
+.home__subtite {
+   position: absolute;
+   top: 10%;
+   left: 30%;
+}
+
 .home__data {
-   /* border-left: 4px solid var(--white); */
-   color: var(--white);
+   /* color: var(--white); */
    padding-left: 0.5rem;
    z-index: var(--z-tooltip);
 }
@@ -320,9 +325,6 @@ img {
    top: 30%;
    left: 10%;
    display: block;
-   font-family: 'Bad Script', cursive;
-   font-size: var(--h1-font-size);
-   font-weight: var(--font-bold);
    overflow: hidden;
 }
 
@@ -339,10 +341,6 @@ img {
 
 .box {
    position: absolute;
-}
-
-.cursor {
-   font-size: var(--h3-font-size);
 }
 
 .home__img {
@@ -408,9 +406,18 @@ img {
 }
 
 .about__description {
-   font: var(--normal-font-size);
-   /* font-weight: var(--font-semi-bold); */
+   overflow-wrap: break-word;
    color: var(--dark);
+}
+
+.qoute {
+   font-family: 'Bad Script', cursive;
+   font-size: var(--h3-font-size);
+   font-weight: var(--font-semi-bold);
+}
+
+.about__text {
+   font-size: var(--normal-font-size);
 }
 
 .about__img {
@@ -444,7 +451,7 @@ img {
    position: relative;
    font-weight: var(--font-semi-bold);
    padding: 0.5rem 1rem;
-   margin-bottom: var(--ml-);
+   margin-bottom: var(--ml-2);
    border-radius: 0.5rem;
    -webkit-box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
    box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
@@ -697,20 +704,13 @@ img {
       width: 540px;
       justify-self: center;
    } */
-   .section-title::after {
-      top: 3.5rem;
-   }
-
-   .contact__form {
-      width: 450px;
-      justify-self: center;
-   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
    body {
       margin: 0;
    }
+
    .about__container,
    .skills__container,
    .works__container,
@@ -781,9 +781,12 @@ img {
       grid-template-columns: repeat(3, 1fr);
    }
 
-   .about__img,
-   .skills__img {
+   .about__img {
       width: 300px;
+   }
+
+   .skills__img {
+      width: 250px;
    }
 
    .contact__form {
@@ -791,22 +794,19 @@ img {
    }
 }
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
    .section {
       justify-self: center;
    }
-}
+} */
 
-@media screen and (min-width: 1140px) {
-   .home__container {
-      justify-self: center;
-   }
-
-   .home__subtite {
-      left: 60%;
-   }
-
+@media screen and (max-width: 1440px) {
    .home__greeting {
-      font-size: 3rem;
+      top: 40%;
+      left: 505;
+      font-size: 2rem;
+   }
+   .contact__form {
+      width: auto;
    }
 }
