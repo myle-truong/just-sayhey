@@ -155,6 +155,52 @@ const swiper = new Swiper('.reference_container', {
    },
 });
 
+/*===== SMTP=====*/
+
+document.addEventListener('DOMContentLoaded', init);
+function init() {
+   document.querySelector('#send').addEventListener('click', submitMsg);
+}
+
+function submitMsg(e) {
+   e.preventDefault();
+
+   let name = document.querySelector('#name').value;
+   let email = document.querySelector('#email').value;
+   let msg = document.querySelector('#msg').value;
+   let token = '';
+   let dest = 'hana2.truong@gmail.com';
+
+   email
+      .send({
+         SecureToken: token,
+         To: dest,
+         From: email,
+         Subject: 'New message from ' + name,
+         Body:
+            'Hi Hana, ' +
+            '<br>' +
+            'Naam: ' +
+            name +
+            '<br>' +
+            'Email: ' +
+            email +
+            '<br>' +
+            'Bericht: ' +
+            msg +
+            '<br>' +
+            '<br>' +
+            '<br>' +
+            'Met vriendelijke groeten,' +
+            '<br>' +
+            '<br>' +
+            'Hana Truong',
+      })
+      .then(console.log('msg send'));
+
+   document.querySelector('.showSuccess').classList.remove('d-none');
+}
+
 /*===== COPYRIGHT =====*/
 const date = new Date();
 const year = date.getFullYear();

@@ -451,32 +451,35 @@
                </div>
 
                <div class="contact__content">
-                  <form action="" class="contact__form">
+                  <form action="" class="contact__form" id="form" method="POST">
                      <div class="contact__inputs">
                         <input
                            required
                            type="text"
                            placeholder="Name"
                            class="contact__input"
+                           id="name"
                         />
                         <input
                            required
                            type="mail"
                            placeholder="Email"
                            class="contact__input"
+                           id="email"
                         />
                         <textarea
                            required
                            placeholder="Messages"
                            name=""
-                           id=""
                            cols="0"
                            rows="7"
                            class="contact__input"
+                           id="message"
                         >
                         </textarea>
                         <input
                            type="submit"
+                           id="send"
                            value="Send message"
                            class="button contact__button"
                         />
@@ -519,6 +522,7 @@
       </footer>
 
       <!-- ===== JS LIBRARIES ===== -->
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script src="./assets/libs/js/mixitup.min.js"></script>
       <script src="./assets/libs/js/swiper-bundle.min.js"></script>
       <script src="./assets/libs/js/gsap.min.js"></script>
