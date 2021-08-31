@@ -101,9 +101,9 @@ document.getElementById('greeting').innerHTML = greeting;
 const words = [
    'I am Hana Truong.',
    'A junior Frontend developer.',
-   'I interested to play with colors, shapes and coding. ',
-   'I am teamplayer & hardworkers.',
-   'I want become A Creative frontend developer',
+   'I am interested in playing with colors, shapes and coding. ',
+   'I am a teamplayer & hardworker.',
+   'I want to become a Creative frontend developer',
    'Please hire me',
 ];
 
@@ -144,7 +144,7 @@ words.forEach((word) => {
 
 /*===== SWIPER CAROUSEL REFERENCES =====*/
 
-const swiper = new Swiper('.reference_container', {
+const swiper = new Swiper('.reference__container', {
    spaceBetween: 16,
    loop: true,
    grabCursor: true,
@@ -152,6 +152,14 @@ const swiper = new Swiper('.reference_container', {
    pagination: {
       el: '.swiper-pagination',
       clickable: true,
+   },
+   breakpoints: {
+      640: {
+         slidesPerView: 2,
+      },
+      1024: {
+         slidePerView: 3,
+      },
    },
 });
 
